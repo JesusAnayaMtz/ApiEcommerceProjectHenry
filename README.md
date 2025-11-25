@@ -26,24 +26,22 @@ Este proyecto fue desarrollado como parte del bootcamp **Henry Full Stack Develo
 ## 🧱 Arquitectura del Proyecto
 
 src/
-├── config/            # Configuración de TypeORM y Cloudinary
-├── decorators/        # Decoradores personalizados (Roles)
-├── file-upload/       # Módulo de carga de archivos
-├── interceptors/      # Validación de payloads
-├── middlewares/       # Logger de datos
-├── migration/         # Migraciones de BD
-├── modules/
-│   ├── auth/          # Login, JWT, Guards y AuthService
-│   ├── categories/    # CRUD categorías
-│   ├── products/      # CRUD productos + stock + imágenes
-│   ├── orders/        # Órdenes y detalle de órdenes
-│   ├── users/         # CRUD usuarios + roles
-│   └── utils/         # Seeder de BD
-├── seeder/            # Servicio para poblar datos
-├── app.module.ts
-└── main.ts
-
-
+- ├── config/            # Configuración de TypeORM y Cloudinary
+- ├── decorators/        # Decoradores personalizados (Roles)
+- ├── file-upload/       # Módulo de carga de archivos
+- ├── interceptors/      # Validación de payloads
+- ├── middlewares/       # Logger de datos
+- ├── migration/         # Migraciones de BD
+- ├── modules/
+- │   ├── auth/          # Login, JWT, Guards y AuthService
+- │   ├── categories/    # CRUD categorías
+- │   ├── products/      # CRUD productos + stock + imágenes
+- │   ├── orders/        # Órdenes y detalle de órdenes
+- │   ├── users/         # CRUD usuarios + roles
+- │   └── utils/         # Seeder de BD
+- ├── seeder/            # Servicio para poblar datos
+- ├── app.module.ts
+- └── main.ts
 
 ---
 
