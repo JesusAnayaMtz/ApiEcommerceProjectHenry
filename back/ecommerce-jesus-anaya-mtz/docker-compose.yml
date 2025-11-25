@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: pgdbecommerce
+    env_file:
+      - ./src/.env.development
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - henryecommerce
+
+  nestapp:
+    build: ./
+    container_name: henryproject
+    ports:
+      - "3001:3000"
+    networks:
+      - henryecommerce
+    depends_on:
+      - db
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin_ecommerce
+    environment:
+      PGADMIN_DEFAULT_EMAIL: j.mtz201289@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 1989Iscj.
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - henryecommerce
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
+  pgadmin_data:
+
+networks:
+  henryecommerce:
